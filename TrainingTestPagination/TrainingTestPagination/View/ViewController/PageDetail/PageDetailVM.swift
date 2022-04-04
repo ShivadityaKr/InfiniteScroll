@@ -13,34 +13,28 @@ class PageDetailVM : NSObject, PageDataSource {
     var dataSource: ResponseElement!
     var viewModel : PageDetailViewModel? {
         didSet {
-            getData(pageDetail: (viewModel?.detail)!)
+            fetchData(pageDetail: (viewModel?.detail)!)
         }
     }
-    func getData(pageDetail : ResponseElement){
+    var fetchAPI = RestManager()
+    func fetchData(pageDetail : ResponseElement) {
         let id = pageDetail.id
         let baseURL = "https://picsum.photos/id/\(id)/info"
-        let url = URL(string: baseURL)
-        guard let requestURL = url else{return}
-        var request = URLRequest(url: requestURL)
-        request.httpMethod = LocalizableStrings.Page.method.localised
-        let session = URLSession.shared
-        let dataTask = session.dataTask(with: request) { data, response, error in
-        guard let data = data, error == nil else {
-            return
+        let url = URL(string: baseURL)!
+        fetchAPI.fetchData(for: url) { (result: Result<ResponseElement, Error>) in
+            switch result {
+            case .success(let response):
+                self.dataSource = response
+                DispatchQueue.main.async {
+                    self.viewModel?.uiVc.viewModel = self
+                }
+                break
+              
+            case .failure(let error):
+                print(error)
+                break
+              
+          }
         }
-        var result: ResponseElement?
-        do {
-            result = try JSONDecoder().decode(ResponseElement.self, from: data)
-        }
-        catch {
-            print(error)
-        }
-        guard let output = result else { return }
-            self.dataSource = output
-        DispatchQueue.main.async {
-            self.viewModel?.uiVc.viewModel = self
-        }
-        }
-        dataTask.resume()
     }
 }

@@ -27,6 +27,8 @@
 		7AB46CBC27FA442E00EB1651 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7AB46CBE27FA442E00EB1651 /* Localizable.strings */; };
 		7AB46CC627FA469000EB1651 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB46CC527FA469000EB1651 /* String.swift */; };
 		7AB46CC827FA46BC00EB1651 /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB46CC727FA46BC00EB1651 /* LocalizableStrings.swift */; };
+		7AF9253627FACAF5004D9162 /* RestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9253527FACAF5004D9162 /* RestManager.swift */; };
+		7AF9253927FAD776004D9162 /* LazyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9253827FAD776004D9162 /* LazyImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		7AB46CBD27FA442E00EB1651 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7AB46CC527FA469000EB1651 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		7AB46CC727FA46BC00EB1651 /* LocalizableStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
+		7AF9253527FACAF5004D9162 /* RestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestManager.swift; sourceTree = "<group>"; };
+		7AF9253827FAD776004D9162 /* LazyImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 		7A5E736027F82B90009A8E72 /* TrainingTestPagination */ = {
 			isa = PBXGroup;
 			children = (
+				7AF9253727FAD769004D9162 /* SupportingFiles */,
 				7A5E73A927F85734009A8E72 /* Networking */,
 				7A5E737527F82C3C009A8E72 /* Extension */,
 				7A5E737827F82C68009A8E72 /* AppLifeCycle */,
@@ -226,6 +231,7 @@
 		7A5E73A927F85734009A8E72 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				7AF9253527FACAF5004D9162 /* RestManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -243,6 +249,14 @@
 			children = (
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		7AF9253727FAD769004D9162 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				7AF9253827FAD776004D9162 /* LazyImageView.swift */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,12 +338,14 @@
 				7AB46CB027FA2D6800EB1651 /* PageDetailUIVC.swift in Sources */,
 				7A5E738027F8338D009A8E72 /* UIStoryboard+Navigation.swift in Sources */,
 				7A5E73AC27F85937009A8E72 /* ApiModel.swift in Sources */,
+				7AF9253627FACAF5004D9162 /* RestManager.swift in Sources */,
 				7A5E73A727F8537C009A8E72 /* PageCVC.swift in Sources */,
 				7A5E738D27F83912009A8E72 /* PageVM.swift in Sources */,
 				7AB46CB727FA397600EB1651 /* PageDetailVC.swift in Sources */,
 				7A5E738927F836B3009A8E72 /* PageVC.swift in Sources */,
 				7AB46CC827FA46BC00EB1651 /* LocalizableStrings.swift in Sources */,
 				7A5E736227F82B90009A8E72 /* AppDelegate.swift in Sources */,
+				7AF9253927FAD776004D9162 /* LazyImageView.swift in Sources */,
 				7AB46CAD27F8BDB800EB1651 /* UIImageView.swift in Sources */,
 				7A5E738327F833D8009A8E72 /* SplashVC.swift in Sources */,
 				7A5E738F27F8391E009A8E72 /* PageUIVC.swift in Sources */,

@@ -44,15 +44,15 @@ class PageCVC: UITableViewCell {
     func unhideChooseOneLabel() {
         chooseOneLabel.isHidden = false
     }
-    private let imageCache = NSCache<AnyObject, UIImage>()
+
     func setData(data : ResponseElement, _ index : Int) {
+        self.pageData = data
+        self.nameLabel.text = data.author
+        self.chooseOneLabel.text = "\(LocalizableStrings.TableCell.chooseOneLabel.localised) \(index)"
         if sampleImageView.image == nil{
             self.sampleImageView.image = UIImage(named: LocalizableStrings.TableCell.imageName.localised)
         }
-        DispatchQueue.main.asyncAfter(deadline: .now()) {
-            self.pageData = data
-            self.nameLabel.text = data.author
-            self.chooseOneLabel.text = "\(LocalizableStrings.TableCell.chooseOneLabel.localised) \(index)"
+        DispatchQueue.global().async {
             self.sampleImageView.loadImageCacheWithUrlString(urlString: data.downloadURL)
         }
     }

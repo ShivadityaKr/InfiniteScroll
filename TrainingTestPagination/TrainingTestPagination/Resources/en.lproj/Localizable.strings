@@ -7,7 +7,7 @@
 */
 //TableCell
 "PageCVC/identifier" = "PageCVC";
-"PageCVC/imageName" = "house.fill";
+"PageCVC/imageName" = "photo.artframe";
 "PageCVC/chooseOneLabel/text" = "I'm the choosen one";
 //PageDetail
 "PageDetailVC/backButton/title" = "Go Back";
