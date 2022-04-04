@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  TrainingTestPagination
+
+  Created by Shivaditya Kumar on 04/04/22.
+  
+*/
+//TableCell
+"PageCVC/identifier" = "PageCVC";
+"PageCVC/imageName" = "house.fill";
+"PageCVC/chooseOneLabel/text" = "I'm the choosen one";
+//PageDetail
+"PageDetailVC/backButton/title" = "Go Back";
+"PageDetailVC/backButton/imageName" = "chevron.backward.2";
+"PageDetailVC/authorNameLabel/text" = "Author Name";
+//Page
+"Page/method" = "GET";
